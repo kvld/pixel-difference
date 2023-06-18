@@ -4,22 +4,21 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftPixelmatch",
-    platforms: [.iOS(.v13), .macOS(.v10_15)],
+    name: "PixelDifference",
     products: [
         .library(
-            name: "SwiftPixelmatch",
-            targets: ["SwiftPixelmatch"]
+            name: "PixelDifference",
+            targets: ["PixelDifference"]
         ),
     ],
     targets: [
         .target(
-            name: "SwiftPixelmatch",
+            name: "PixelDifference",
             path: "Sources/"
         ),
         .testTarget(
-            name: "SwiftPixelmatchTests",
-            dependencies: ["SwiftPixelmatch"],
+            name: "PixelDifferenceTests",
+            dependencies: ["PixelDifference"],
             path: "Tests/",
             resources: [.copy("Resources")]
         )
